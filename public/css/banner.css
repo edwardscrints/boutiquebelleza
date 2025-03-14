@@ -1,0 +1,32 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+.slider {
+    @apply w-full max-h-96 fixed flex overflow-hidden inset-x-0;
+    position: fixed; /* Asegúrate de que el contenedor tenga posición relativa */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    width: 100%; /* Asegúrate de que el contenedor ocupe el ancho completo */
+    height: 100%; /* Ajusta la altura según sea necesario */
+  }
+  .slider-image {
+    @apply w-full h-full object-cover transition-opacity duration-500 ease-in-out;
+}
+  .slide {
+    @apply w-full h-full absolute opacity-0 transition-opacity duration-[1s] ease-[ease-in-out];
+    position: absolute; /* Posiciona las imágenes absolutamente */
+    top: 0; /* Alinea al inicio del contenedor */
+    left: 0; /* Alinea al inicio del contenedor */
+    width: 100%; /* Asegúrate de que cada slide ocupe el ancho completo */
+    height: 100%; /* Asegúrate de que cada slide ocupe la altura completa */
+    opacity: 0; /* Comienza oculto */
+    transition: opacity 0.4s ease-in-out; /* Transición suave */
+  }
+  .slide.active {
+    @apply opacity-100;
+    /* Muestra la imagen activa */
+  }
+  .slide.opacity-100 {
+    opacity: 1; /* Muestra la imagen activa */
+}
