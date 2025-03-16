@@ -4,17 +4,17 @@
   @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
 */
 .slider {
-    @apply w-full max-h-96 fixed flex overflow-hidden inset-x-0;
+    @apply flex inset-x-0;
     position: fixed; /* Asegúrate de que el contenedor tenga posición relativa */
     overflow: hidden; /* Oculta cualquier contenido que se desborde */
     width: 100%; /* Asegúrate de que el contenedor ocupe el ancho completo */
     height: 100%; /* Ajusta la altura según sea necesario */
   }
   .slider-image {
-    @apply w-full h-full object-cover transition-opacity duration-500 ease-in-out;
+    @apply transition-opacity duration-500 ease-in-out;
 }
   .slide {
-    @apply w-full h-full absolute opacity-0 transition-opacity duration-[1s] ease-[ease-in-out];
+    @apply absolute opacity-0 duration-[1s] ease-[ease-in-out];
     position: absolute; /* Posiciona las imágenes absolutamente */
     top: 0; /* Alinea al inicio del contenedor */
     left: 0; /* Alinea al inicio del contenedor */
