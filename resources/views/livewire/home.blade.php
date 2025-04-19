@@ -1,8 +1,8 @@
 <div>
     <x-welcome-banner />
-    <div class="slider">
+    <div class="slider mx-auto">
     </div>
-    <div class="px-4 py-12 mx-auto space-y-12 sm:px-6 lg:px-8">
+    <div class="px-4 mx-auto">
         @if ($this->saleCollection)
             <x-collection-sale />
         @endif

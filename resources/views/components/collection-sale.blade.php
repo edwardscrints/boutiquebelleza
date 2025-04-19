@@ -1,5 +1,5 @@
 <section>
-    <div class="p-8 overflow-hidden border-4 border-gray-900 rounded-lg">
+    <div class="w-full absolute p-8 overflow-hidden border-4 border-gray-900 rounded-lg bg-black">
         <div class="sm:py-32 sm:relative">
             <div>
                 <h2 class="text-3xl font-extrabold sm:text-5xl">
@@ -18,6 +18,7 @@
                 >
                     Shop the Sale
                 </a>
+                
             </div>
 
             <div class="mt-8 sm:absolute sm:right-0 sm:top-0 sm:mt-0">

@@ -1,5 +1,5 @@
 <header class="relative border-b border-gray-100">
-    <div class="flex items-center justify-between h-16 px-4 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between px-4 mx-auto  sm:px-6">
         <div class="flex items-center">
             <a class="flex items-center flex-shrink-0"
                href="{{ url('/') }}"
@@ -9,16 +9,17 @@
 
                 <x-brand.logo class="w-auto h-6 text-indigo-600" />
             </a>
-
+            
             <nav class="hidden lg:gap-4 lg:flex lg:ml-8">
-                @foreach ($this->collections as $collection)
+                
+                @for ($i = 0; $i < min(4, count($this->collections)); $i++)
                     <a class="text-sm font-medium transition hover:opacity-75"
-                       href="{{ route('collection.view', $collection->defaultUrl->slug) }}"
+                       href="{{ route('collection.view', $this->collections[$i]->defaultUrl->slug) }}"
                        wire:navigate
                     >
-                        {{ $collection->translateAttribute('name') }}
+                        {{ $this->collections[$i]->translateAttribute('name') }}
                     </a>
-                @endforeach
+                @endfor
             </nav>
         </div>
 
@@ -53,16 +54,16 @@
                          class="absolute right-0 top-auto z-50 w-screen p-4 sm:max-w-xs">
                         <ul x-on:click.away="mobileMenu = false"
                             class="p-6 space-y-4 bg-white border border-gray-100 shadow-xl rounded-xl">
-                            @foreach ($this->collections as $collection)
+                            @for($i = 0; $i < min(8, count($this->collections)); $i++)
                                 <li>
                                     <a class="text-sm font-medium"
-                                       href="{{ route('collection.view', $collection->defaultUrl->slug) }}"
+                                       href="{{ route('collection.view', $this->collections[$i]->defaultUrl->slug) }}"
                                        wire:navigate
                                     >
-                                        {{ $collection->translateAttribute('name') }}
+                                        {{ $this->collections[$i]->translateAttribute('name') }}
                                     </a>
                                 </li>
-                            @endforeach
+                            @endfor
                         </ul>
                     </div>
                 </div>

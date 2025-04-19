@@ -1,5 +1,5 @@
 
-    <div class="slider fixed overflow-hidden max-h-96 w-full rounded-lg">
+    <div class="slider fixed overflow-hidden max-h-96 w-full rounded-lg ">
         @foreach ($this->getSlidersProperty() as $index => $slider)
             <img src="{{ asset($slider['image']) }}" alt="{{ $slider['name'] }}" 
                 class="slide w-full h-full object-cover transition-opacity duration-500 ease-in-out 
@@ -29,13 +29,13 @@
 {{--Botones por agregar
     <div class="flex flex-wrap justify-center gap-4 mt-8">
                     <a class="block w-full px-12 py-3 font-medium text-white bg-indigo-600 rounded shadow sm:w-auto active:bg-indigo-500 hover:bg-indigo-700 focus:outline-none focus:ring"
-                    href="https://lunarphp.io/"
+                    href="https://facebook/viuter.com"
                     target="_blank"
                     rel="noopener noreferrer">
                         Lunar Website
                     </a>
                     <a class="block w-full px-12 py-3 font-medium text-indigo-600 rounded shadow sm:w-auto hover:text-indigo-700 active:text-indigo-500 focus:outline-none focus:ring"
-                    href="https://github.com/lunarphp/demo-store"
+                    href="https://github.com/viuter/"
                     target="_blank"
                     rel="noopener noreferrer">
                         Demo Store Repo
